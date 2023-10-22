@@ -9,17 +9,17 @@ class CalcController extends Controller
     public function calcs($value1, $operator, $value2)
     {
         if ($operator == "addition") {
-            $answer = $value1 + $value2;
+            $result = $value1 + $value2;
         } elseif ($operator == "subtraction") {
-            $answer = $value1 - $value2;
+            $result = $value1 - $value2;
         } elseif ($operator == "multiplication") {
-            $answer = $value1 * $value2;
+            $result = $value1 * $value2;
         } elseif ($operator == "division") {
-            $answer = $value1 / $value2;
+            $result = $value1 / $value2;
         } else {
-            $answer = " ";
+            $result = " ";
         }
 
-        return view("calcs", ["answer" => $answer]);
+        return view("calcs", ["result" => $result]);
     }
 }
